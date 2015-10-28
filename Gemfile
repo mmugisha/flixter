@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 #hook up factory girl for testing
-gem "factory_girl_rails", "~>4.0"
+gem 'factory_girl_rails', '~>4.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
