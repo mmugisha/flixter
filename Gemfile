@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#use clearance for authentication
+gem 'clearance', '>=1.5'
+
 #put in the styling
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'sass-rails', '>=3.2'

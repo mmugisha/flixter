@@ -33,4 +33,9 @@ Flixter::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+
+  #configuration for clearance gem
+  config.action_mailer.default_url_options = {host: 'localhost:3030'}
+
+
 end

@@ -77,4 +77,9 @@ Flixter::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  #configure clearance to create full URLs in emails
+  config.action_mailer.default_url_options = {host: 'flixter-mugisha.herokuapp.com'}
+
+
 end
