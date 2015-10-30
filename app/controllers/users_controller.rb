@@ -2,16 +2,17 @@ class UsersController < Clearance::UsersController
 	def create
 		#run this by Matt.
 		#added the lines below to check that passwords match before proceeding
-		@raw_user_params_hash = raw_user_params
 
 		password = params[:user][:password]
 		password_confirmation = params[:user][:password_confirmation]
 
 		if !(password.eql?(password_confirmation))
 			flash[:error] = "Passwords don't match"
-			render template: "users/new"			
-			
+			redirect_to sign_up_path
+			return			
 		end
+
+		#end of addition by Mugisha
 
 	    @user = user_from_params
 
