@@ -36,6 +36,7 @@ Flixter::Application.configure do
 
   #configuration for clearance gem
   config.action_mailer.default_url_options = {host: 'localhost:3030'}
+  config.middleware.use Clearance::BackDoor
 
 
 end
