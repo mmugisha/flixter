@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#simple form for the forms
+gem 'simple_form'
+
 #use clearance for authentication
 gem 'clearance', '>=1.5'
 
