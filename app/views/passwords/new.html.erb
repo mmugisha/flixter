@@ -1,16 +1,15 @@
-<div id="clearance" class="password-reset">
+<div id="clearance" class="password-reset booyah-box col-xs-7 col-xs-offset-2">
   <h2><%= t(".title") %></h2>
 
   <p><%= t(".description") %></p>
 
-  <%= form_for :password, url: passwords_path do |form| %>
-    <div class="text-field">
-      <%= form.label :email %>
-      <%= form.text_field :email, type: 'email' %>
+  <%= simple_form_for :password, url: passwords_path do |form| %>
+    <div class="form-inputs">
+      <%= form.input :email, required: false, autofocus: true %>
     </div>
 
-    <div class="submit-field">
-      <%= form.submit %>
+    <div class="form-actions">
+      <%= form.button :submit, "Reset Password", :class=> 'btn btn-primary' %>
     </div>
   <% end %>
 </div>
