@@ -7,10 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<%= render 'layouts/navbar' %>
-	<%= render 'shared/flashmessages', flash: flash %>
+	<div id="wrap">
+		<%= render 'layouts/navbar' %>
+		<%= render 'shared/flashmessages', flash: flash %>
+		<%= yield %>
+	</div>
+	<br class="clr" />
 
-<%= yield %>
+	<div id="footer">
+		<div class="container">
+			<b> Footer Here </b>
+			<br/>
+
+			<%= link_to 'Link', '#' %>
+		</div>
+	</div>
 
 </body>
 </html>
