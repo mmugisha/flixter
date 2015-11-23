@@ -8,7 +8,7 @@
   <div class="form-inputs">
     <%= f.input :email, required: true, autofocus: true %>
     <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
+    <%= f.input :password_confirmation %>
   </div>
   <br/>
 
@@ -16,6 +16,7 @@
     <%= f.button :submit, "Sign up", :class=>'btn btn-primary' %>
   </div>
 <% end %>
+<%= debug(params) if Rails.env.development? %>
 <br/>
 
 <div class="other-links">
