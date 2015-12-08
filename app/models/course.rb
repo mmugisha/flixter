@@ -1,4 +1,4 @@
-aclass Course < ActiveRecord::Base
+class Course < ActiveRecord::Base
 	belongs_to :user
 
 	validates :title, :presence => true
