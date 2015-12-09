@@ -1,5 +1,6 @@
 class Instructor::CoursesController < ApplicationController
 	before_action :require_login
+
 	def new
 		@course = Course.new
 
@@ -19,6 +20,12 @@ class Instructor::CoursesController < ApplicationController
 	end
 
 	private
+	
+	helper_method :current_course
+	def current_course
+		@current_course ||= Course.find(params[:id])
+	end
+
 	def course_params
 		params.require(:course).permit(:title, :description, :cost)
 	end
