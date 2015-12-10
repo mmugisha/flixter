@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#for image uploading
+gem 'carrierwave'
+
 #simple form for the forms
 gem 'simple_form'
 
