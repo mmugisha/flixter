@@ -16,6 +16,18 @@
         	<%= link_to 'Administer', instructor_course_path(current_course), 
         		:class => 'btn btn-danger btn-large' %>
         <% end %>
+
+        <br />
+        <br />
+        <% if current_user && current_user.enrolled_in?(current_course) %>
+        	<h3 class="label label-info"> You are enrolled! </h3>
+
+        <% else %>
+        	<%= link_to 'Enroll', course_enrollments_path(current_course), :method => :post,
+        	:class=> 'btn btn-primary' %>
+
+        <% end %>
+        
 	</div>
 
 	<div class="col-sm-8 col-xs-12">

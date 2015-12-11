@@ -4,6 +4,7 @@ class CoursesController < ApplicationController
 	end
 
 	def show
+
 	end
 
 	helper_method :current_course
@@ -11,5 +12,6 @@ class CoursesController < ApplicationController
 		@course ||= Course.find(params[:id])
 	end
 
+	
 
 end

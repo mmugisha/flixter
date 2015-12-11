@@ -1,6 +1,7 @@
 class LessonsController < ApplicationController
 	before_action :require_login
 	def show
+		@enrollment = Enrollment.create(enrollment_params)
 	end
 
 
@@ -9,4 +10,6 @@ class LessonsController < ApplicationController
 	def current_lesson
 		@lesson ||= Lesson.find(params[:id])
 	end
+
+	
 end
