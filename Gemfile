@@ -2,12 +2,14 @@ source 'https://rubygems.org'
 
 #used to resize images before they are uploaded
 gem 'mini_magick','~> 4.3.1'
-#so that carrier wave can speak with Amazon S3
-gem 'fog','~>1.3.1'
 
 
 #for image uploading
 gem 'carrierwave'
+
+#so that carrier wave can speak with Amazon S3
+gem 'carrierwave-aws'
+
 
 #for hiding credentials 
 gem 'figaro', '>=1.0.0'
