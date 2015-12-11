@@ -4,7 +4,11 @@ class CoursesController < ApplicationController
 	end
 
 	def show
-		@course = Course.find(params[:id])
+	end
+
+	helper_method :current_course
+	def current_course
+		@course ||= Course.find(params[:id])
 	end
 
 

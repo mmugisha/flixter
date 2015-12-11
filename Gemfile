@@ -1,7 +1,15 @@
 source 'https://rubygems.org'
 
+#so that carrier wave can speak with Amazon S3
+gem 'fog','~>1.3.1'
+
+
 #for image uploading
 gem 'carrierwave'
+
+#for hiding credentials 
+gem 'figaro', '>=1.0.0'
+
 
 #simple form for the forms
 gem 'simple_form'
@@ -10,8 +18,11 @@ gem 'simple_form'
 gem 'clearance', '>=1.5'
 
 #put in the styling
-gem 'bootstrap-sass', '~> 3.3.4'
-gem 'sass-rails', '>=3.2'
+#gem 'bootstrap-sass', '~> 3.3.4'
+gem 'bootstrap-sass','3.3.5.1'
+gem 'sass-rails'
+#gem 'sass-rails', '>=3.2'
+gem 'sprockets','2.11.0'
 
 #hook up factory girl for testing
 gem 'factory_girl_rails', '~>4.0'
