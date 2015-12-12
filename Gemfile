@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#accept payments
+gem 'stripe'
+
 #used to resize images before they are uploaded
 gem 'mini_magick','~> 4.3.1'
 

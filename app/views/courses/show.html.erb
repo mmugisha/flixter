@@ -25,6 +25,7 @@
         <% else %>
         	<%= link_to 'Enroll', course_enrollments_path(current_course), :method => :post,
         	:class=> 'btn btn-primary' %>
+        	<%= render 'courses/stripe' %>
 
         <% end %>
         
