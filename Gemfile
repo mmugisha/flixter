@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#keep track of the ordering of elements in database
+gem 'ranked-model'
+
 #accept payments
 gem 'stripe'
 
