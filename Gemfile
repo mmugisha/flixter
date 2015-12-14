@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 
+#enable rearranging of UI elements 
+gem 'jquery-ui-rails'
+
 #keep track of the ordering of elements in database
+
 gem 'ranked-model'
 
 #accept payments
