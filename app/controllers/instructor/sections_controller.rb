@@ -20,7 +20,9 @@ class Instructor::SectionsController < ApplicationController
 	end
 
 	def update
-		current_section.update_attributes(section_params)
+		@boolean = current_section.update_attributes(section_params)
+		puts @boolean.to_s
+		#current_section.update(row_order: params[:row_order])
 		render :text => 'Updated!'
 	end
 
@@ -48,6 +50,6 @@ class Instructor::SectionsController < ApplicationController
 	end
 
 	def section_params
-		params.require(:section).permit(:title, :row_order)
+		params.require(:section).permit(:title, :row_order_position)
 	end
 end
