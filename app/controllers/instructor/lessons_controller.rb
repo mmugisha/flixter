@@ -15,7 +15,7 @@ class Instructor::LessonsController < ApplicationController
 
 	def update
 		current_lesson.update_attributes(lesson_params)
-		puts "The row order is now:"+current_lesson.row_order.to_s
+		#puts "The row order is now:"+current_lesson.row_order.to_s
 		render :text => 'updated!'
 	end
 
