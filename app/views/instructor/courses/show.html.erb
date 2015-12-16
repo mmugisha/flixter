@@ -1,5 +1,12 @@
 <script>
 	$(function(){
+		$('.new-lesson-button').click(function(){
+			var lessonUrl = $(event.target).data('lesson-url');
+			$('#newLessonForm').attr('action',lessonUrl);
+		}
+			);
+	});
+	$(function(){
 		$('.lessons').sortable({
 			update: function(event, ui){
 				$.ajax({
@@ -36,7 +43,7 @@
 	<br class="clr" />
 
 	<div class="text-center">
-		<!-- <%= link_to 'Add a new section...', '#', :class=>'btn btn-lg btn-primary' %> -->
+		
 		<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newSectionModal">
   			Add a new section...
 		</button>
@@ -52,7 +59,13 @@
 					<%= section.title %>
 				</div>
 				<div class="col-xs-4">
-					<%= link_to 'New Lesson', new_instructor_section_lesson_path(section), :class=>"pull-right btn btn-primary btn-xs" %>
+					
+					<button class="btn btn-primary btn-sm pull-right new-lesson-button" data-toggle="modal" data-target="#newLessonModal"
+					     data-lesson-url="<%= instructor_section_lessons_path(section) %>">
+  							New Lesson
+					</button>
+  	
+
 				</div>
 				<br class="clr" />
 				<br class="clr" />
@@ -83,5 +96,6 @@
 
 </div>
 
-<%= render 'instructor/modal' %>
+<%= render 'instructor/sectionModal' %>
+<%= render 'instructor/lessonModal' %>
 
