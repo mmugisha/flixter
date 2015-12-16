@@ -36,7 +36,11 @@
 	<br class="clr" />
 
 	<div class="text-center">
-		<%= link_to 'Add a new section...', new_instructor_course_section_path(current_course), :class=>'btn btn-lg btn-primary' %>
+		<!-- <%= link_to 'Add a new section...', '#', :class=>'btn btn-lg btn-primary' %> -->
+		<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newSectionModal">
+  			Add a new section...
+		</button>
+
 	</div>
 
 	<ul class="sections">
@@ -78,3 +82,6 @@
 	</ul>
 
 </div>
+
+<%= render 'instructor/modal' %>
+

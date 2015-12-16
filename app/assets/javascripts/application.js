@@ -16,8 +16,6 @@
 //= require turbolinks
 //= require_tree .
 
-// Loads all the Bootstrap javascripts
-//= require bootstrap 
 
 // Library for fancy javascript UI stuff
 //= require jquery-ui
