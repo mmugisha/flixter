@@ -12,7 +12,7 @@
 	color: white; 
 }
 .hero{
-	background: url('hero.jpg') no-repeat center center fixed;
+	background: url('hero.jpeg') no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -134,6 +134,10 @@ ul .header .glyphicon {
 }
 .lessons li p {
 	margin: 0;
+}
+
+.my-big-label{
+	height: 20px;
 }
 
 
